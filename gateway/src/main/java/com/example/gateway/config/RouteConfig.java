@@ -12,13 +12,13 @@ public class RouteConfig {
     public RouteLocator gatewayRoutes(RouteLocatorBuilder routeLocatorBuilder) {
         return routeLocatorBuilder.routes()
                 .route("user-service", rt -> rt.path("/api/v1/users/**")
-                        .uri("http://localhost:3005/"))
+                        .uri("http://host.docker.internal:3005/"))
                 .route("post-service", rt -> rt.path("/api/v1/posts/**")
-                        .uri("http://localhost:3010/"))
+                        .uri("http://host.docker.internal:3010/"))
                 .route("comment-service", rt -> rt.path("/api/v1/posts/**")
-                        .uri("http://localhost:3015/"))
+                        .uri("http://host.docker.internal:3015/"))
                 .route("like-service", rt -> rt.path("/api/v1/postsOrComments/**")
-                        .uri("http://localhost:3020/"))
+                        .uri("http://host.docker.internal:3020/"))
                 .build();
     }
 }

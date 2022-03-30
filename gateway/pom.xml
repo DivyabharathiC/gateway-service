@@ -60,6 +60,7 @@
 
 			</plugin>
 		</plugins>
+		<finalName>docker-gateway</finalName>
 	</build>
 
 </project>
