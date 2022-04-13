@@ -22,12 +22,12 @@ public class RouteConfig {
                 .route("comment-service", rt -> rt.path("/api/v1/post/**")
                         .filters(f -> f.filter(filter))
                         .uri("http://localhost:3015/"))
-                .route("like-service", rt -> rt.path("/api/v1/postsOrComments/*/likes/**")
+                .route("like-service", rt -> rt.path("/api/v1/postsOrComments/**")
                         .filters(f -> f.filter(filter))
                         .uri("http://localhost:3020/"))
                 .route("authentication", rt -> rt.path("/auth/**")
                         .filters(f -> f.filter(filter))
-                        .uri("http://localhost:8075/"))
+                        .uri("http://localhost:3000/"))
                 .build();
 
 
